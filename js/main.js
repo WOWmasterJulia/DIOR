@@ -1,4 +1,4 @@
-const swiper = new Swiper(".top__slider", {
+const swiperTop = new Swiper(".top__slider", {
   // Optional parameters
   //   direction: "vertical",
   //   loop: true,
@@ -28,8 +28,8 @@ const swiper = new Swiper(".top__slider", {
 
 
 const swiperAbout = new Swiper(".about__slider", {
-  slidesPerView: 3,
-  spaceBetween: 30,
+  slidesPerView: 4,
+  spaceBetween: 20,
   freeMode: true,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -39,4 +39,11 @@ const swiperAbout = new Swiper(".about__slider", {
   //     el: ".swiper-pagination",
   //     clickable: true,
   //   },
+});
+
+
+document.querySelectorAll('.accordeon__triger').forEach((item) => {
+  item.addEventListener('click', () => {
+    item.parentNode.classList.toggle('accordeon__item--active')
+  })
 });

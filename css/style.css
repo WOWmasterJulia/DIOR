@@ -74,7 +74,7 @@ body{
 
 /* HERO */
 .top{
-   margin-bottom: 150px;
+   margin-bottom: 100px;
 }
 .top-slide{
    background-repeat: no-repeat;
@@ -108,16 +108,18 @@ body{
    margin-bottom: 20px;
 }
 .top-slide-btn{
+   margin-left: auto;
+}
+.button{
    color: #7449BB;
    text-transform: uppercase;
    font-weight: 700;
    padding: 21px 55px;
    border: 1px solid #7449BB;
    display: inline-block;
-   margin-left: auto;
    transition: all .3s ease;
 }
-.top-slide-btn:hover{
+.button:hover{
    color: #fff;
    background-color: #7449BB;
 }
@@ -136,4 +138,161 @@ body{
 .swiper-button-next{
    left: 75px;
    right: auto;
+}
+
+/* ABOUT */
+.about {
+   margin-bottom: 100px;
+   overflow: hidden;
+}
+.about__inner {
+   padding-left: 200px;
+}
+.about__title {
+   font-family: "Playfair Display", serif;
+   font-weight: 400;
+   font-size: 32px;
+   text-transform: uppercase; 
+   max-width: 185px;
+   line-height: 1.34;
+   margin-bottom: 20px;
+}
+.about__textbox {
+   margin-bottom: 150px;
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-end;
+}
+.about__text {
+   flex-basis: 387px;
+   line-height: 1.2;
+}
+.about__text p{
+   margin-bottom: 15px;
+}
+.about__text--bold {
+   font-weight: 700;
+}
+
+/* slider about */
+.about__slider {
+   width: 1800px;
+   padding-left: 200px;
+   margin-left: -200px;
+   padding-bottom: 20px;
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.about__item {
+}
+.about__item-title {
+   margin-bottom: 20px;
+}
+.container-arrow {
+}
+.about__arrow{
+   margin-left: -198px;
+   margin-top: -6px;
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
+.about__btn {
+   
+}
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+    opacity: 1;
+}
+
+/* ACCORDEON */
+.accordeon {
+   margin-bottom: 223px;
+}
+.container {
+}
+.accordeon__inner {
+   padding-left: 200px;
+}
+.accordeon__item {
+   border-bottom: 1px solid #000;
+   padding: 0 100px 0 0;
+   position: relative;
+}
+.accordeon__item::before{
+   content: '';
+   position: absolute;
+   width: 16px;
+   height: 51px;
+   background-image: url(../images/arrow-down.svg);
+   right: 86px;
+   top: 50px;
+}
+.accordeon__item:last-child::after{
+   content: '';
+   position: absolute;
+   background-image: url(../images/accordeon/accordeon_decor.jpg);
+   width: 65px;
+   height: 120px;
+   bottom: -73px;
+   left: 268px;
+}
+.accordeon__triger {
+   display: flex;
+   justify-content: space-between;
+   cursor: pointer;
+   padding-top: 50px;
+}
+.accordeon__triger-title {
+   text-transform: uppercase;
+   font-size: 24px;
+   flex-basis: 300px;
+   padding-bottom: 42px;
+}
+.accordeon__triger-text {
+   flex-basis: 387px;
+   margin-right: 104px;
+   padding-bottom: 20px;
+}
+.accordeon__content {
+   padding-top: 20px;
+   padding-bottom: 20px;
+   display: none;
+}
+
+.accordeon__item--active .accordeon__content{
+   display: block;
+}
+.accordeon__content p{
+   margin-bottom: 10px;
+}
+
+/* PRODUCTS */
+.products {
+   margin-bottom: 150px;
+}
+
+.products__inner {
+   /* display: flex; */
+
+}
+.products__title {
+   font-family: "Playfair Display", serif;
+   line-height: 1.34;
+   font-size: 32px;
+   width: 100px;
+}
+.products__items {
+}
+.products__item {
+}
+.products__item-step {
+}
+.products__item-img {
+}
+.products__item-name {
+}
+.products__item-price {
 }
