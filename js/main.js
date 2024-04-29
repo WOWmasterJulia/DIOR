@@ -9,10 +9,10 @@ const swiperTop = new Swiper(".top__slider", {
   //   },
   spaceBetween: 30,
   effect: "fade",
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
   // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
