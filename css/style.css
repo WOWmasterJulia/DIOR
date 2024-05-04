@@ -48,14 +48,26 @@ body{
    line-height: 1.4;
    color: #1B1B1B;
 }
+
+
 .header{
-   margin-bottom: 90px;
+   /* margin-bottom: 90px; */
+}
+/* Липкий хедер */
+.header__top{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 10;
 }
 .header__inner{
    display: flex;
    /* равномерное распределение эл в строку: */
    justify-content: space-between;
    padding-top: 30px;
+   padding-bottom: 26px;
 }
 .header__title{
    font-family: "Playfair Display", serif;
@@ -79,9 +91,11 @@ body{
 
 /* HERO */
 .top{
+   margin-top: 180px;
    margin-bottom: 100px;
 }
 .top-slide{
+   margin-top: 10px;
    background-repeat: no-repeat;
    background-size: cover;
    background-position: top center;
