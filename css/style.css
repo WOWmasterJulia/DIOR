@@ -48,11 +48,22 @@ body{
    line-height: 1.4;
    color: #1B1B1B;
 }
-
-
-.header{
-   /* margin-bottom: 90px; */
+/* ----------------- */
+.anim-show{
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
 }
+.anim-show._active,
+._active .anim-show{
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
+/* ----------------- */
+
+/* .header{
+   margin-bottom: 90px;
+} */
 /* Липкий хедер */
 .header__top{
     position: fixed;
@@ -74,7 +85,16 @@ body{
    font-weight: 400;
    text-transform: uppercase; 
    margin-left: auto;
+
+   transform: translate(0px, 0px);
+   opacity: 0;
+   transition: all 0.8s ease 0s;
 }
+.header__title._active{
+   transform: translate(0px, 0px);
+   opacity: 1;
+}
+
 .menu{
    margin-left: 130px;
    margin-right: 185px;
@@ -111,24 +131,64 @@ body{
    flex-basis: 183px;
    margin-top: -88px;
 }
+
 .top-slide-title{
    font-family: "Playfair Display", serif;
    font-weight: 400;
    text-transform: uppercase; 
    font-size: 70px;
    line-height: 1.3;
+
+   transform: translate(0px, 0px);
+   opacity: 0;
+   transition: all 0.8s ease 0s;
 }
+.top-slide-title._active{
+   transform: translate(0px, 0px);
+   opacity: 1;
+}
+
 .top-slide-subtitle{
    font-size: 24px;
    margin-bottom: 10px;
 
+   transform: translate(0px, 0px);
+   opacity: 0;
+   transition: all 0.8s ease 0s;
 }
+.top-slide-subtitle._active{
+   transform: translate(0px, 0px);
+   opacity: 1;
+   transition: all 0.8s ease 0.4s;
+}
+
 .top-slide-text{
    margin-bottom: 20px;
+
+   transform: translate(0px, 0px);
+   opacity: 0;
+   transition: all 0.8s ease 0s;
 }
+.top-slide-text._active{
+   transform: translate(0px, 0px);
+   opacity: 1;
+   transition: all 0.8s ease 0.6s;
+}
+
 .top-slide-btn{
    margin-left: auto;
+
+   transform: translate(0px, 0px);
+   opacity: 0;
+   transition: all 0.8s ease 0s;
 }
+.top-slide-btn._active{
+   transform: translate(0px, 0px);
+   opacity: 1;
+   transition: all 0.8s ease 0.8s;
+}
+
+
 .button{
    color: #7449BB;
    text-transform: uppercase;
@@ -182,7 +242,16 @@ body{
    max-width: 185px;
    line-height: 1.34;
    margin-bottom: 20px;
+
+   transform: translate(0px, 50%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
 }
+.about__title._active{
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
 .about__textbox {
    margin-bottom: 150px;
    display: flex;
@@ -221,6 +290,17 @@ body{
     opacity: 1;
 }
 
+.about__btn{
+   transform: translate(0px, 50%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+.about__btn._active{
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+
 /* ACCORDEON */
 .accordeon {
    margin-bottom: 223px;
@@ -232,7 +312,28 @@ body{
    border-bottom: 1px solid #000;
    padding: 0 100px 0 0;
    position: relative;
+
+   transform: translate(-180%, 0px);
+   transition: all 0.3s ease 0s;
 }
+
+.accordeon__inner._active .accordeon__item:nth-child(1){
+   transition: all 0.8s ease 0s;
+}
+.accordeon__inner._active .accordeon__item:nth-child(2){
+   transition: all 0.8s ease 0.2s;
+}
+.accordeon__inner._active .accordeon__item:nth-child(3){
+   transition: all 0.8s ease 0.4s;
+}
+.accordeon__inner._active .accordeon__item:nth-child(4){
+   transition: all 0.8s ease 0.6s;
+}
+
+.accordeon__inner._active .accordeon__item{
+   transform: translate(0px, 0px);
+}
+
 .accordeon__item::before{
    content: '';
    position: absolute;
@@ -290,14 +391,21 @@ body{
 .products__inner {
    position: relative;
    min-height: 647px;
-
-
 }
 .products__title {
    font-family: "Playfair Display", serif;
    line-height: 1.34;
    font-size: 32px;
    width: 100px;
+
+   transform: translate(0px, 50%);
+   opacity: 0;
+   transition: all 0.3s ease 0s;
+}
+.products__inner._active .products__title{
+   transform: translate(0px, 0px);
+   opacity: 1;
+   transition: all 0.3s ease 0s;
 }
 .products__items {
    display: flex;
@@ -314,24 +422,72 @@ body{
    font-weight: 700;
    opacity: 0.5;
    margin-bottom: 20px;
+
+   transform: translate(0px, 50%);
+   opacity: 0;
+   transition: all 0.3s ease 0s;
 }
+.products__item._active .products__item-step{
+   transform: translate(0px, 0px);
+   opacity: 1;
+   transition: all 0.3s ease 0s;
+}
+
 .products__item-img {
    margin-bottom: 20px;
+
+   transform: scale(0);
+   transition: all 0.8s ease 0s;
 }
+.products__item._active .products__item-img{
+   transform: scale(1);
+   /* transition: all 0.3s ease 0s; */
+}
+
+
 .products__item-name {
    margin-bottom: 10px;
+
+   transform: translate(0px, 50%);
+   opacity: 0;
+   transition: all 0.3s ease 0s;
 }
+.products__item._active .products__item-name{
+   transform: translate(0px, 0px);
+   opacity: 1;
+   transition: all 0.3s ease 0.3s;
+}
+
 .products__item-name span{
    display: block;
    font-weight: 700;
    margin-bottom: 10px;
+
+   transform: translate(0px, 50%);
+   opacity: 0;
+   transition: all 0.3s ease 0s;
+}
+.products__item._active .products__item-name span{
+   transform: translate(0px, 0px);
+   opacity: 1;
+   transition: all 0.3s ease 0.6s;
 }
 .products__item-price {
    font-family: "Playfair Display", serif;
    line-height: 1.34;
    font-size: 32px;
    /* font-style: italic; */
+
+   transform: translate(0px, 50%);
+   opacity: 0;
+   transition: all 0.3s ease 0s;
 }
+.products__item._active .products__item-price{
+   transform: translate(0px, 0px);
+   opacity: 1;
+   transition: all 0.3s ease 0.9s;
+}
+
 /* VIDEO */
 .video {
    margin-bottom: 150px;
@@ -363,6 +519,14 @@ body{
 }
 .footer__logo {
    margin-right: 10px;
+}
+.footer__img{
+   transform: scale(0);
+   transition: all 0.8s ease 0s;
+}
+.footer__top._active .footer__img{
+   transform: scale(1);
+   /* transition: all 0.3s ease 0s; */
 }
 
 .footer__items {
